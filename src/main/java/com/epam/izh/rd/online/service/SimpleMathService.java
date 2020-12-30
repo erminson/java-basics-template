@@ -13,7 +13,15 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int compare(int value1, int value2) {
-        return -2;
+        if (value1 > value2) {
+            return 1;
+        }
+
+        if (value1 < value2) {
+            return -1;
+        }
+
+        return 0;
     }
 
     /**
