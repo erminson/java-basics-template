@@ -39,7 +39,13 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int maxFrom(int[] values) {
-        return -1;
+        int maxValue = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (maxValue < values[i]) {
+                maxValue = values[i];
+            }
+        }
+        return maxValue;
     }
 
     /**
