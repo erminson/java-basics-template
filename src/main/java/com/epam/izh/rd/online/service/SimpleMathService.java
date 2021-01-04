@@ -107,7 +107,15 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public long calcFibonacci(int number) {
-        return -1L;
+        int curr = 0;
+        int next = 1;
+        for (int i = 0; i < number; i++) {
+            int buff = curr;
+            curr = next;
+            next += buff;
+        }
+
+        return curr;
     }
 
     /**
