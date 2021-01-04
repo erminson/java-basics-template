@@ -137,7 +137,14 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public boolean isPrimary(int number) {
-        return false;
+        double sqrt = Math.sqrt(number);
+        for (int i = 2; i <= sqrt; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
