@@ -47,6 +47,7 @@ public class SimpleMathService implements MathService {
                 maxValue = values[i];
             }
         }
+
         return maxValue;
     }
 
@@ -60,6 +61,7 @@ public class SimpleMathService implements MathService {
         for (int i = 0; i < values.length; i++) {
             sum += values[i];
         }
+
         return sum;
     }
 
@@ -126,6 +128,7 @@ public class SimpleMathService implements MathService {
     public int[] sort(int[] values) {
         int[] copyValues = Arrays.copyOf(values, values.length);
         Arrays.sort(copyValues);
+
         return copyValues;
     }
 
